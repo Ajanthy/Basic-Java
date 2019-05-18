@@ -1,0 +1,25 @@
+public class InsertionSort
+{
+	public static void main(String args[])
+	{
+		int loc;
+		int value;
+		int A[] = { 10,30,20,40,60};
+		for(int i = 1; i < A.length; i++)
+		{
+			loc = i;
+			value = A[i];
+			while(loc>0 && A[loc-1] >value)
+			{
+				A[loc] = A[loc-1];
+				loc = loc-1;
+			}
+			A[loc] = value;
+		}
+		System.out.println("Sorted Array List");
+		for(int j = 0;j<A.length;j++)
+		{
+			System.out.print(A[j]+", ");
+		}
+	}
+}
